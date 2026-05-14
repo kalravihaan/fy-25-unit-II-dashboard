@@ -551,7 +551,7 @@ function renderOverview(){
   document.getElementById('ov-ins').innerHTML=
     `Peak month: <strong>${D.month_labels[D.months_order.indexOf(peakM)]}</strong> (₹${fL(D.monthly_sales[peakM])}L). Return rate <strong>${retPct}%</strong>. Gross margin (incl. stitching): <strong style="color:${f.mg>=0?'var(--green)':'var(--red)'}">${mgPct}%</strong>.`;
   document.getElementById('ov-kpi1').innerHTML=[
-    kpi('Gross Sales',fmt(f.s),'Gs/ invoices',null,'var(--green)'),
+    kpi('Gross Sales',fmt(f.s),'All invoices',null,'var(--green)'),
     kpi('Net Sales',fmt(f.net),'after returns',null,'var(--cyan)'),
     kpi('Returns',fmt(f.r),retPct+'% of gross',{c:'badge-dn',t:'↓'+retPct+'%'},'var(--red)'),
     kpi('Total Pcs',num(f.pcs),'dispatched',null,'var(--amber)'),
